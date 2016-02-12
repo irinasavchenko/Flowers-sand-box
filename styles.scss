@@ -1,0 +1,113 @@
+﻿@import "_fonts";
+@import "_mixins";
+
+/* clear the default browser styles */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal; }
+
+button, input {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+header {
+  nav.upper_nav {
+    height: 75px;
+    background-color: #dd6743;
+    padding: 0 235px;
+    div.logo {
+      p {
+        font-family: "Pacifico";
+        font-size: 36px;
+        color: #fff;
+      }
+    }
+    .nav_contacts {
+      float: right;
+      font-family: "Folks-Light";
+      ul {
+        float: right;
+        li {
+          float: left;
+          display: block;
+          line-height: 75px;
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            padding: 0 20px;
+
+          }
+          span {
+            color: #ab2717;
+            font-size: 15px;
+            padding: 0 50px;
+
+          }
+        }
+      }
+    }
+  }
+  .add_img {
+    width: 100%;
+    height: 9px;
+    background: url("./images/dashboard_browse_gifts.png") repeat-x;
+  }
+  .user_info {
+    margin: 30px 225px 0 100px;
+    color: #0f3d46;
+    font-size: 17px;
+    .dashboard {
+      float: left;
+      p {
+        border-bottom: 4px solid #ffc051;
+        font-family: "Folks-Light";
+        padding: 0 15px 20px;
+      }
+    }
+    .user_account {
+      float: right;
+      a {
+        height: 100%;
+        padding: 10px 15px 10px 40px;
+        text-decoration: none;
+        font-family: "Folks-Light";
+        background: url("./images/dashboard_browse_gifts_user_img.png") no-repeat left center;
+        img {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.add_div {
+  height: 3px;
+  width: 100%;
+  clear: both;
+  @include gradient (top,#d1ccd1,#e9e9e6);
+}
+.main_content {
+  height: 500px;
+  background-image: url("./images/dashboard_browse_gifts_backgr.png");
+  padding: 30px 225px 0 0;
+  .btn_add_contact {
+    float: right;
+    button {
+     // padding: 10px 35px;
+      height: 30px;
+      width: 225px;
+      border-radius: 15px;
+      background-color: #ffc153;
+      border: 1px solid #ca9337;
+      color: #8f5d25;
+      font-size: 16px;
+      font-family: "Folks-Light";
+    }
+  }
+}
+
