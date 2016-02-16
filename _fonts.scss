@@ -5,6 +5,12 @@
 
 @font-face {
   font-family: "Folks-Light";
-  src: url("./fonts/folks/Folks-Light.ttf");
+  src: url("./fonts/folks/Folks-Light.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "TrashHand";
+  src: url("./fonts/trash_hand/TrashHand.TTF") format("truetype");
+}
+
 

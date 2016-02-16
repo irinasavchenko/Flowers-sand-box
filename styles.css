@@ -3,7 +3,10 @@
   src: url("./fonts/pacifico/Pacifico.ttf") format("truetype"); }
 @font-face {
   font-family: "Folks-Light";
-  src: url("./fonts/folks/Folks-Light.ttf"); }
+  src: url("./fonts/folks/Folks-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: "TrashHand";
+  src: url("./fonts/trash_hand/TrashHand.TTF") format("truetype"); }
 /* clear the default browser styles */
 html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote {
   padding: 0;
@@ -78,9 +81,10 @@ header .user_info {
 .main_content {
   height: 500px;
   background-image: url("./images/dashboard_browse_gifts_backgr.png");
-  padding: 30px 225px 0 0; }
+  padding: 25px 225px 0 220px; }
   .main_content .btn_add_contact {
-    float: right; }
+    float: right;
+    margin-bottom: 23px; }
     .main_content .btn_add_contact button {
       height: 30px;
       width: 225px;
@@ -90,5 +94,69 @@ header .user_info {
       color: #8f5d25;
       font-size: 16px;
       font-family: "Folks-Light"; }
+  .main_content nav.main_nav {
+    font-family: "Folks-Light";
+    clear: right;
+    height: 57px; }
+    .main_content nav.main_nav ul li {
+      display: block;
+      float: left;
+      height: 57px;
+      width: 130px;
+      border: 1px solid #d2dce1;
+      border-radius: 2px;
+      margin: 0 4px;
+      text-align: center;
+      background-color: #f8f8f8;
+      font-size: 16px; }
+      .main_content nav.main_nav ul li div.table_cell {
+        display: table-cell;
+        vertical-align: middle;
+        height: inherit;
+        width: inherit; }
+        .main_content nav.main_nav ul li div.table_cell a {
+          text-decoration: none;
+          color: #0f3d46;
+          font-size: 16px; }
+    .main_content nav.main_nav ul li.active {
+      margin-left: 20px;
+      border: 1px solid #fefefe;
+      background-color: #fefefe; }
+      .main_content nav.main_nav ul li.active .table_cell a {
+        color: #45bcd2; }
+  .main_content .dashboard {
+    padding: 25px 120px 0 50px;
+    background-color: #fefefe;
+    clear: both;
+    height: 100%; }
+    .main_content .dashboard .dashboard_label {
+      float: left; }
+      .main_content .dashboard .dashboard_label p {
+        font-family: "TrashHand";
+        font-size: 45px;
+        color: #45bcd2;
+        padding-top: 25px; }
+    .main_content .dashboard .filter {
+      font-family: "Folks-Light";
+      font-size: 16px;
+      float: left; }
+      .main_content .dashboard .filter .filter_label {
+        float: left;
+        margin-left: 65px; }
+        .main_content .dashboard .filter .filter_label p {
+          color: #0f3d46;
+          line-height: 85px; }
+      .main_content .dashboard .filter .occasion {
+        float: left;
+        margin-left: 25px; }
+        .main_content .dashboard .filter .occasion p {
+          color: #45bcd2;
+          padding: 0 0 8px 10px; }
+        .main_content .dashboard .filter .occasion select {
+          width: 195px;
+          height: 30px;
+          color: #0f3d46;
+          font-family: "Folks-Light";
+          font-size: 16px; }
 
 /*# sourceMappingURL=styles.css.map */
