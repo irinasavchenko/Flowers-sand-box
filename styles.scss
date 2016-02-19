@@ -52,38 +52,38 @@ header {
       }
     }
   }
+}
   .add_img {
     width: 100%;
     height: 9px;
     background: url("./images/dashboard_browse_gifts.png") repeat-x;
   }
   .user_info {
-    margin: 30px 225px 0 100px;
+    margin: 30px 225px 9px 225px;
     color: #0f3d46;
     font-size: 17px;
-    .dashboard {
+    height: 35px;
+    font-family: "Folks-Light";
+    .user_dashboard {
       float: left;
       p {
         border-bottom: 4px solid #ffc051;
-        font-family: "Folks-Light";
         padding: 0 15px 20px;
       }
     }
     .user_account {
       float: right;
       a {
-        height: 100%;
         padding: 10px 15px 10px 40px;
         text-decoration: none;
-        font-family: "Folks-Light";
         background: url("./images/dashboard_browse_gifts_user_img.png") no-repeat left center;
+        color: #0f3d46;
         img {
           padding-left: 5px;
         }
       }
     }
   }
-}
 
 .add_div {
   height: 3px;
@@ -93,9 +93,8 @@ header {
 }
 
 .main_content {
-  height: 500px;
-  background-image: url("./images/dashboard_browse_gifts_backgr.png");
-  padding: 25px 225px 0 220px;
+  background-image: url("./images/dashboard_browse_gifts_backgr_light_gray.png");
+  padding: 25px 225px 50px 225px;
   .btn_add_contact {
     float: right;
     margin-bottom: 23px;
@@ -122,6 +121,7 @@ header {
         height: 57px;
         width: 130px;
         border: 1px solid #d2dce1;
+        border-bottom: none;
         border-radius: 2px;
         margin: 0 4px;
         text-align: center;
@@ -136,12 +136,13 @@ header {
             text-decoration: none;
             color: #0f3d46;
             font-size: 16px;
+            padding: 5px;
           }
         }
       }
       li.active {
         margin-left: 20px;
-        border: 1px solid #fefefe;
+        border-bottom: 1px solid #fefefe;
         background-color: #fefefe;
         .table_cell {
           a {
@@ -153,10 +154,11 @@ header {
   }
 
   .dashboard {
-    padding: 25px 120px 0 50px;
+    padding: 25px 35px 0 35px;
     background-color: #fefefe;
     clear: both;
     height: 100%;
+    border: 1px solid #d2dce1;
     .dashboard_label {
       float: left;
       p {
@@ -170,6 +172,7 @@ header {
       font-family: "Folks-Light";
       font-size: 16px;
       float: left;
+      margin-bottom: 50px;
       .filter_label {
         float: left;
         margin-left: 65px;
@@ -178,7 +181,7 @@ header {
           line-height: 85px;
         }
       }
-      .occasion {
+      .occasion, .budget {
         float: left;
         margin-left: 25px;
         p {
@@ -192,8 +195,108 @@ header {
           font-family: "Folks-Light";
           font-size: 16px;
         }
+        select:focus {
+          outline: none;
+        }
+      }
+      .budget {
+        margin-left: 45px;
       }
     }
+    .photo_gallery {
+      clear: both;
+      font-family: "Folks-Light";
+      figure {
+        float: left;
+        padding: 7px 7px 7px 7px;
+        background-color: #f7f9fa;
+        margin: 0 11px 11px 0;
+        h1 {
+          color: #45bcd2;
+          font-size: 18px;
+          padding: 20px 0 15px 0;
+        }
+        p {
+          color: #0f3d46;
+          font-size: 16px;
+        }
+        figcaption {
+          margin-bottom:  5px;
+        }
+      }
+
+    }
+    .pagination {
+      clear: both;
+      margin: 35px auto;
+      width: 40%;
+      font-family: "Folks-Light";
+      font-size: 16px;
+      li {
+        display: block;
+        float: left;
+        a {
+          text-decoration: none;
+          color: #0f3d46;
+          line-height: 32px;
+        }
+        button {
+          width: 80px;
+          height: 30px;
+          background-color: #f3f6f8;
+          border: 1px solid #45bcd2;
+          border-radius: 2px;
+          color: #45bcd2;
+        }
+        a,button {
+          padding: 0 15px;
+        }
+      }
+      li.active_page a{
+        color: #45bcd2;
+      }
+    }
+
+  }
+  .notice_area {
+    margin: 25px 0;
+    font-family: "Folks-Light";
+    .shape_1,.shape_2 {
+      width: 30%;
+      border: 1px solid #c4d5dc;
+      float: left;
+      margin-right: 15px;
+      background-color: #fffbe3;
+      p {
+        color: #dd6743;
+        font-size: 15px;
+        padding: 20px 80px 35px 25px;
+        background: url(./images/dashboard_browse_gifts_shape.png) no-repeat 95% 10%;
+      }
+    }
+   div:first-child {
+     margin-left: 40px;
+   }
+  }
+  .add_div_clear {
+    clear: both;
+  }
+
+}
+.promo {
+  height: 75px;
+  background: url(./images/dashboard_browse_gifts_backgr_gray.png);
+  width: 100%;
+  p {
+    font-family: "TrashHand";
+    color: #45bcd2;
+    font-size: 27px;
+    line-height: 80px;
+    padding-left: 225px;
   }
 }
-
+.basement {
+  width: 100%;
+  height: 100px;
+  background: url(./images/dashboard_browse_gifts_backgr_dark_gray.png);
+}
