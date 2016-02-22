@@ -297,6 +297,84 @@ header {
 }
 .basement {
   width: 100%;
-  height: 100px;
   background: url(./images/dashboard_browse_gifts_backgr_dark_gray.png);
+  font-family: "Folks-Light";
+  padding: 25px 0 0 225px;
+  .about, .client_serv, .get_in_touch, .type_of_occasion, .social {
+    margin-right: 35px;
+    float: left;
+    .title_about, .title_client_serv, .title_get_in_touch, .title_type_of_occasion, .title_social {
+      height: 30px;
+      width: 173px;
+      background-color: #ffffff;
+      position: relative;
+      margin-bottom: 15px;
+      p {
+        color: #dd6743;
+        font-size: 18px;
+        padding-left: 10px;
+        line-height: 30px;
+      }
+      .triangle {
+        width: 18px;
+        height: 11px;
+        position: absolute;
+        left: 25px;
+        top: 30px;
+        background: url("./images/dashboard_browse_gifts_shape_triangle.png")no-repeat;
+      }
+    }
+   .title_type_of_occasion {
+      width: 380px;
+    }
+    .body_about, .body_client_serv, .body_type_of_occasion, .body_social {
+      font-size: 15px;
+      line-height: 22px;
+      li {
+        color: #169bb4;
+        list-style-image: url(./images/list_type.png);
+        margin-left: 15px;
+        span {
+          color: #dd6743;
+          margin-right: 5px;
+        }
+      }
+    }
+    .body_get_in_touch {
+      font-size: 15px;
+      line-height: 22px;
+      h1 {
+        color: #dd6743;
+      }
+      p {
+        color: #169bb4;
+      }
+    }
+    .body_type_of_occasion {
+      width: 380px;
+      ul.left_list {
+        float: left;
+        width: 47%;
+      }
+      ul.right_list {
+        float: right;
+        width: 47%;
+      }
+      .add_div_clear {
+        clear: both;
+      }
+    }
+  }
+  .type_of_occasion {
+    clear: both;
+    width: 380px;
+    margin-top: 50px;
+    margin-right: 35px;
+  }
+  .social {
+    margin-top: 50px;
+  }
+  .add_div_clear {
+    clear: both;
+  }
 }

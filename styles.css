@@ -240,7 +240,67 @@ header nav.upper_nav {
 
 .basement {
   width: 100%;
-  height: 100px;
-  background: url(./images/dashboard_browse_gifts_backgr_dark_gray.png); }
+  background: url(./images/dashboard_browse_gifts_backgr_dark_gray.png);
+  font-family: "Folks-Light";
+  padding: 25px 0 0 225px; }
+  .basement .about, .basement .client_serv, .basement .get_in_touch, .basement .type_of_occasion, .basement .social {
+    margin-right: 35px;
+    float: left; }
+    .basement .about .title_about, .basement .about .title_client_serv, .basement .about .title_get_in_touch, .basement .about .title_type_of_occasion, .basement .about .title_social, .basement .client_serv .title_about, .basement .client_serv .title_client_serv, .basement .client_serv .title_get_in_touch, .basement .client_serv .title_type_of_occasion, .basement .client_serv .title_social, .basement .get_in_touch .title_about, .basement .get_in_touch .title_client_serv, .basement .get_in_touch .title_get_in_touch, .basement .get_in_touch .title_type_of_occasion, .basement .get_in_touch .title_social, .basement .type_of_occasion .title_about, .basement .type_of_occasion .title_client_serv, .basement .type_of_occasion .title_get_in_touch, .basement .type_of_occasion .title_type_of_occasion, .basement .type_of_occasion .title_social, .basement .social .title_about, .basement .social .title_client_serv, .basement .social .title_get_in_touch, .basement .social .title_type_of_occasion, .basement .social .title_social {
+      height: 30px;
+      width: 173px;
+      background-color: #ffffff;
+      position: relative;
+      margin-bottom: 15px; }
+      .basement .about .title_about p, .basement .about .title_client_serv p, .basement .about .title_get_in_touch p, .basement .about .title_type_of_occasion p, .basement .about .title_social p, .basement .client_serv .title_about p, .basement .client_serv .title_client_serv p, .basement .client_serv .title_get_in_touch p, .basement .client_serv .title_type_of_occasion p, .basement .client_serv .title_social p, .basement .get_in_touch .title_about p, .basement .get_in_touch .title_client_serv p, .basement .get_in_touch .title_get_in_touch p, .basement .get_in_touch .title_type_of_occasion p, .basement .get_in_touch .title_social p, .basement .type_of_occasion .title_about p, .basement .type_of_occasion .title_client_serv p, .basement .type_of_occasion .title_get_in_touch p, .basement .type_of_occasion .title_type_of_occasion p, .basement .type_of_occasion .title_social p, .basement .social .title_about p, .basement .social .title_client_serv p, .basement .social .title_get_in_touch p, .basement .social .title_type_of_occasion p, .basement .social .title_social p {
+        color: #dd6743;
+        font-size: 18px;
+        padding-left: 10px;
+        line-height: 30px; }
+      .basement .about .title_about .triangle, .basement .about .title_client_serv .triangle, .basement .about .title_get_in_touch .triangle, .basement .about .title_type_of_occasion .triangle, .basement .about .title_social .triangle, .basement .client_serv .title_about .triangle, .basement .client_serv .title_client_serv .triangle, .basement .client_serv .title_get_in_touch .triangle, .basement .client_serv .title_type_of_occasion .triangle, .basement .client_serv .title_social .triangle, .basement .get_in_touch .title_about .triangle, .basement .get_in_touch .title_client_serv .triangle, .basement .get_in_touch .title_get_in_touch .triangle, .basement .get_in_touch .title_type_of_occasion .triangle, .basement .get_in_touch .title_social .triangle, .basement .type_of_occasion .title_about .triangle, .basement .type_of_occasion .title_client_serv .triangle, .basement .type_of_occasion .title_get_in_touch .triangle, .basement .type_of_occasion .title_type_of_occasion .triangle, .basement .type_of_occasion .title_social .triangle, .basement .social .title_about .triangle, .basement .social .title_client_serv .triangle, .basement .social .title_get_in_touch .triangle, .basement .social .title_type_of_occasion .triangle, .basement .social .title_social .triangle {
+        width: 18px;
+        height: 11px;
+        position: absolute;
+        left: 25px;
+        top: 30px;
+        background: url("./images/dashboard_browse_gifts_shape_triangle.png") no-repeat; }
+    .basement .about .title_type_of_occasion, .basement .client_serv .title_type_of_occasion, .basement .get_in_touch .title_type_of_occasion, .basement .type_of_occasion .title_type_of_occasion, .basement .social .title_type_of_occasion {
+      width: 380px; }
+    .basement .about .body_about, .basement .about .body_client_serv, .basement .about .body_type_of_occasion, .basement .about .body_social, .basement .client_serv .body_about, .basement .client_serv .body_client_serv, .basement .client_serv .body_type_of_occasion, .basement .client_serv .body_social, .basement .get_in_touch .body_about, .basement .get_in_touch .body_client_serv, .basement .get_in_touch .body_type_of_occasion, .basement .get_in_touch .body_social, .basement .type_of_occasion .body_about, .basement .type_of_occasion .body_client_serv, .basement .type_of_occasion .body_type_of_occasion, .basement .type_of_occasion .body_social, .basement .social .body_about, .basement .social .body_client_serv, .basement .social .body_type_of_occasion, .basement .social .body_social {
+      font-size: 15px;
+      line-height: 22px; }
+      .basement .about .body_about li, .basement .about .body_client_serv li, .basement .about .body_type_of_occasion li, .basement .about .body_social li, .basement .client_serv .body_about li, .basement .client_serv .body_client_serv li, .basement .client_serv .body_type_of_occasion li, .basement .client_serv .body_social li, .basement .get_in_touch .body_about li, .basement .get_in_touch .body_client_serv li, .basement .get_in_touch .body_type_of_occasion li, .basement .get_in_touch .body_social li, .basement .type_of_occasion .body_about li, .basement .type_of_occasion .body_client_serv li, .basement .type_of_occasion .body_type_of_occasion li, .basement .type_of_occasion .body_social li, .basement .social .body_about li, .basement .social .body_client_serv li, .basement .social .body_type_of_occasion li, .basement .social .body_social li {
+        color: #169bb4;
+        list-style-image: url(./images/list_type.png);
+        margin-left: 15px; }
+        .basement .about .body_about li span, .basement .about .body_client_serv li span, .basement .about .body_type_of_occasion li span, .basement .about .body_social li span, .basement .client_serv .body_about li span, .basement .client_serv .body_client_serv li span, .basement .client_serv .body_type_of_occasion li span, .basement .client_serv .body_social li span, .basement .get_in_touch .body_about li span, .basement .get_in_touch .body_client_serv li span, .basement .get_in_touch .body_type_of_occasion li span, .basement .get_in_touch .body_social li span, .basement .type_of_occasion .body_about li span, .basement .type_of_occasion .body_client_serv li span, .basement .type_of_occasion .body_type_of_occasion li span, .basement .type_of_occasion .body_social li span, .basement .social .body_about li span, .basement .social .body_client_serv li span, .basement .social .body_type_of_occasion li span, .basement .social .body_social li span {
+          color: #dd6743;
+          margin-right: 5px; }
+    .basement .about .body_get_in_touch, .basement .client_serv .body_get_in_touch, .basement .get_in_touch .body_get_in_touch, .basement .type_of_occasion .body_get_in_touch, .basement .social .body_get_in_touch {
+      font-size: 15px;
+      line-height: 22px; }
+      .basement .about .body_get_in_touch h1, .basement .client_serv .body_get_in_touch h1, .basement .get_in_touch .body_get_in_touch h1, .basement .type_of_occasion .body_get_in_touch h1, .basement .social .body_get_in_touch h1 {
+        color: #dd6743; }
+      .basement .about .body_get_in_touch p, .basement .client_serv .body_get_in_touch p, .basement .get_in_touch .body_get_in_touch p, .basement .type_of_occasion .body_get_in_touch p, .basement .social .body_get_in_touch p {
+        color: #169bb4; }
+    .basement .about .body_type_of_occasion, .basement .client_serv .body_type_of_occasion, .basement .get_in_touch .body_type_of_occasion, .basement .type_of_occasion .body_type_of_occasion, .basement .social .body_type_of_occasion {
+      width: 380px; }
+      .basement .about .body_type_of_occasion ul.left_list, .basement .client_serv .body_type_of_occasion ul.left_list, .basement .get_in_touch .body_type_of_occasion ul.left_list, .basement .type_of_occasion .body_type_of_occasion ul.left_list, .basement .social .body_type_of_occasion ul.left_list {
+        float: left;
+        width: 47%; }
+      .basement .about .body_type_of_occasion ul.right_list, .basement .client_serv .body_type_of_occasion ul.right_list, .basement .get_in_touch .body_type_of_occasion ul.right_list, .basement .type_of_occasion .body_type_of_occasion ul.right_list, .basement .social .body_type_of_occasion ul.right_list {
+        float: right;
+        width: 47%; }
+      .basement .about .body_type_of_occasion .add_div_clear, .basement .client_serv .body_type_of_occasion .add_div_clear, .basement .get_in_touch .body_type_of_occasion .add_div_clear, .basement .type_of_occasion .body_type_of_occasion .add_div_clear, .basement .social .body_type_of_occasion .add_div_clear {
+        clear: both; }
+  .basement .type_of_occasion {
+    clear: both;
+    width: 380px;
+    margin-top: 50px;
+    margin-right: 35px; }
+  .basement .social {
+    margin-top: 50px; }
+  .basement .add_div_clear {
+    clear: both; }
 
 /*# sourceMappingURL=styles.css.map */
