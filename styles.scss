@@ -13,17 +13,21 @@ button, input {
   padding: 0;
   outline: none;
 }
-
+ body {
+   min-width: 1390px;
+ }
 header {
   nav.upper_nav {
     height: 75px;
     background-color: #dd6743;
-    padding: 0 235px;
+    padding: 0 225px;
     div.logo {
-      p {
+      float: left;
+      a {
         font-family: "Pacifico";
         font-size: 36px;
         color: #fff;
+        text-decoration: none;
       }
     }
     .nav_contacts {
@@ -40,7 +44,9 @@ header {
             color: #fff;
             font-size: 15px;
             padding: 0 20px;
-
+          }
+          a:hover {
+            color: #ab2717;
           }
           span {
             color: #ab2717;
@@ -58,21 +64,29 @@ header {
     height: 9px;
     background: url("./images/dashboard_browse_gifts.png") repeat-x;
   }
-  .user_info {
-    margin: 30px 225px 9px 225px;
-    color: #0f3d46;
-    font-size: 17px;
-    height: 35px;
-    font-family: "Folks-Light";
-    .user_dashboard {
-      float: left;
-      p {
-        border-bottom: 4px solid #ffc051;
-        padding: 0 15px 20px;
-      }
+
+.user_info {
+  margin: 30px 225px 9px 225px;
+  color: #0f3d46;
+  font-size: 17px;
+  height: 35px;
+  font-family: "Folks-Light";
+  .user_dashboard {
+    float: left;
+    a {
+      border-bottom: 4px solid #ffc051;
+      padding: 0 20px 21px;
+      text-decoration: none;
+      color: #0f3d46;
     }
-    .user_account {
-      float: right;
+  }
+  .user_account {
+    float: right;
+    position: relative;
+    li {
+      display: inline;
+      position: relative;
+      list-style-type: none;
       a {
         padding: 10px 15px 10px 40px;
         text-decoration: none;
@@ -82,8 +96,33 @@ header {
           padding-left: 5px;
         }
       }
+      ul {
+        display: none;
+        position: absolute;
+        top: 22px;
+        width: 150px;
+        padding: 10px;
+        background-color: #ffffff;
+        li {
+          display: block;
+
+        }
+      }
+      ul > li > a {
+        background-image: none;
+        padding: 0;
+        cursor: pointer;
+      }
+      ul > li > a:hover {
+        color: black;
+      }
     }
+    li:hover ul {
+      display: block;
+    }
+
   }
+}
 
 .add_div {
   height: 3px;
@@ -115,6 +154,9 @@ header {
     clear: right;
     height: 57px;
     ul {
+      display: table;
+      float: left;
+      margin-bottom: -1px;
       li {
         display: block;
         float: left;
@@ -140,8 +182,7 @@ header {
           }
         }
       }
-      li.active {
-        margin-left: 20px;
+      li.active, li:hover {
         border-bottom: 1px solid #fefefe;
         background-color: #fefefe;
         .table_cell {
@@ -150,6 +191,10 @@ header {
           }
         }
       }
+      li.active {
+        margin-left: 20px;
+      }
+
     }
   }
 
@@ -229,7 +274,7 @@ header {
     .pagination {
       clear: both;
       margin: 35px auto;
-      width: 40%;
+      width: 45%;
       font-family: "Folks-Light";
       font-size: 16px;
       li {
@@ -287,6 +332,7 @@ header {
   height: 75px;
   background: url(./images/dashboard_browse_gifts_backgr_gray.png);
   width: 100%;
+  position: relative;
   p {
     font-family: "TrashHand";
     color: #45bcd2;
@@ -294,14 +340,85 @@ header {
     line-height: 80px;
     padding-left: 225px;
   }
+  .advert {
+    height: 441px;
+    width: 285px;
+    position: absolute;
+    top: -8px;
+    right: 225px;
+    background: url(./images/dashboard_browse_gifts-shape_for_ad.png) no-repeat center bottom ;
+    padding-bottom: 34px;
+    .content_ad {
+      background-color: #fff;
+      height: 100%;
+      text-align: center;
+      padding: 0 20px;
+      h1 {
+        color: #dd6743;
+        font-family: "TrashHand";
+        font-size: 40px;
+      }
+      p {
+        color: #0f3d46;
+        font-size: 17px;
+        font-family: "Folks-Light";
+        padding: 0;
+        line-height: 20px;
+      }
+      h1,p {
+        padding-top: 25px;
+      }
+      form {
+        margin-bottom: 35px;
+        input[type=email] {
+          height: 30px;
+          width: 250px;
+          border-radius: 20px;
+          border: 1px solid #c9c9c9;
+          color: #bfbfbf;
+          font-size: 16px;
+          font-family: "Folks-Normal";
+          text-align: center;
+          margin-top: 15px;
+        }
+        input[type=submit] {
+          margin-top: 10px;
+          height: 30px;
+          width: 225px;
+          background-color: #ffce63;
+          border: 1px solid #f4b244;
+          border-bottom: #ca9337;
+          border-radius: 20px;
+          color: #8f5d25;
+          font-family: "Folks-Light";
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+      a {
+        font-family: "Folks-Light";
+        font-size: 17px;
+        color: #45bcd2;
+        margin-top: 35px;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      p {
+        font-size: 17px;
+        color: #0f3d46;
+        font-family: "Folks-Light";
+      }
+    }
+  }
 }
 .basement {
-  width: 100%;
   background: url(./images/dashboard_browse_gifts_backgr_dark_gray.png);
   font-family: "Folks-Light";
   padding: 25px 0 0 225px;
   .about, .client_serv, .get_in_touch, .type_of_occasion, .social {
     margin-right: 35px;
+    margin-bottom: 50px;
     float: left;
     .title_about, .title_client_serv, .title_get_in_touch, .title_type_of_occasion, .title_social {
       height: 30px;
@@ -331,12 +448,18 @@ header {
       font-size: 15px;
       line-height: 22px;
       li {
-        color: #169bb4;
         list-style-image: url(./images/list_type.png);
         margin-left: 15px;
         span {
           color: #dd6743;
           margin-right: 5px;
+        }
+        a {
+          text-decoration: none;
+          color: #169bb4;
+        }
+        a:hover {
+          color: #dd6743;
         }
       }
     }
@@ -368,13 +491,29 @@ header {
   .type_of_occasion {
     clear: both;
     width: 380px;
-    margin-top: 50px;
     margin-right: 35px;
   }
-  .social {
-    margin-top: 50px;
-  }
+
   .add_div_clear {
     clear: both;
+  }
+}
+
+.basement:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 55px;
+}
+footer {
+  height: 55px;
+  background-color: #dd6743;
+  margin-top: -55px;
+  p {
+    font-size: 14px;
+    color: white;
+    font-family: "Folks-Light";
+    line-height: 65px;
+    padding-left: 245px;
   }
 }

@@ -5,6 +5,9 @@
   font-family: "Folks-Light";
   src: url("./fonts/folks/Folks-Light.ttf") format("truetype"); }
 @font-face {
+  font-family: "Folks-Normal";
+  src: url("./fonts/folks/Folks-Normal.ttf") format("truetype"); }
+@font-face {
   font-family: "TrashHand";
   src: url("./fonts/trash_hand/TrashHand.TTF") format("truetype"); }
 /* clear the default browser styles */
@@ -19,14 +22,20 @@ button, input {
   padding: 0;
   outline: none; }
 
+body {
+  min-width: 1390px; }
+
 header nav.upper_nav {
   height: 75px;
   background-color: #dd6743;
-  padding: 0 235px; }
-  header nav.upper_nav div.logo p {
-    font-family: "Pacifico";
-    font-size: 36px;
-    color: #fff; }
+  padding: 0 225px; }
+  header nav.upper_nav div.logo {
+    float: left; }
+    header nav.upper_nav div.logo a {
+      font-family: "Pacifico";
+      font-size: 36px;
+      color: #fff;
+      text-decoration: none; }
   header nav.upper_nav .nav_contacts {
     float: right;
     font-family: "Folks-Light"; }
@@ -41,6 +50,8 @@ header nav.upper_nav {
           color: #fff;
           font-size: 15px;
           padding: 0 20px; }
+        header nav.upper_nav .nav_contacts ul li a:hover {
+          color: #ab2717; }
         header nav.upper_nav .nav_contacts ul li span {
           color: #ab2717;
           font-size: 15px;
@@ -59,18 +70,42 @@ header nav.upper_nav {
   font-family: "Folks-Light"; }
   .user_info .user_dashboard {
     float: left; }
-    .user_info .user_dashboard p {
+    .user_info .user_dashboard a {
       border-bottom: 4px solid #ffc051;
-      padding: 0 15px 20px; }
-  .user_info .user_account {
-    float: right; }
-    .user_info .user_account a {
-      padding: 10px 15px 10px 40px;
+      padding: 0 20px 21px;
       text-decoration: none;
-      background: url("./images/dashboard_browse_gifts_user_img.png") no-repeat left center;
       color: #0f3d46; }
-      .user_info .user_account a img {
-        padding-left: 5px; }
+  .user_info .user_account {
+    float: right;
+    position: relative; }
+    .user_info .user_account li {
+      display: inline;
+      position: relative;
+      list-style-type: none; }
+      .user_info .user_account li a {
+        padding: 10px 15px 10px 40px;
+        text-decoration: none;
+        background: url("./images/dashboard_browse_gifts_user_img.png") no-repeat left center;
+        color: #0f3d46; }
+        .user_info .user_account li a img {
+          padding-left: 5px; }
+      .user_info .user_account li ul {
+        display: none;
+        position: absolute;
+        top: 22px;
+        width: 150px;
+        padding: 10px;
+        background-color: #ffffff; }
+        .user_info .user_account li ul li {
+          display: block; }
+      .user_info .user_account li ul > li > a {
+        background-image: none;
+        padding: 0;
+        cursor: pointer; }
+      .user_info .user_account li ul > li > a:hover {
+        color: black; }
+    .user_info .user_account li:hover ul {
+      display: block; }
 
 .add_div {
   height: 3px;
@@ -99,34 +134,39 @@ header nav.upper_nav {
     font-family: "Folks-Light";
     clear: right;
     height: 57px; }
-    .main_content nav.main_nav ul li {
-      display: block;
+    .main_content nav.main_nav ul {
+      display: table;
       float: left;
-      height: 57px;
-      width: 130px;
-      border: 1px solid #d2dce1;
-      border-bottom: none;
-      border-radius: 2px;
-      margin: 0 4px;
-      text-align: center;
-      background-color: #f8f8f8;
-      font-size: 16px; }
-      .main_content nav.main_nav ul li div.table_cell {
-        display: table-cell;
-        vertical-align: middle;
-        height: inherit;
-        width: inherit; }
-        .main_content nav.main_nav ul li div.table_cell a {
-          text-decoration: none;
-          color: #0f3d46;
-          font-size: 16px;
-          padding: 5px; }
-    .main_content nav.main_nav ul li.active {
-      margin-left: 20px;
-      border-bottom: 1px solid #fefefe;
-      background-color: #fefefe; }
-      .main_content nav.main_nav ul li.active .table_cell a {
-        color: #45bcd2; }
+      margin-bottom: -1px; }
+      .main_content nav.main_nav ul li {
+        display: block;
+        float: left;
+        height: 57px;
+        width: 130px;
+        border: 1px solid #d2dce1;
+        border-bottom: none;
+        border-radius: 2px;
+        margin: 0 4px;
+        text-align: center;
+        background-color: #f8f8f8;
+        font-size: 16px; }
+        .main_content nav.main_nav ul li div.table_cell {
+          display: table-cell;
+          vertical-align: middle;
+          height: inherit;
+          width: inherit; }
+          .main_content nav.main_nav ul li div.table_cell a {
+            text-decoration: none;
+            color: #0f3d46;
+            font-size: 16px;
+            padding: 5px; }
+      .main_content nav.main_nav ul li.active, .main_content nav.main_nav ul li:hover {
+        border-bottom: 1px solid #fefefe;
+        background-color: #fefefe; }
+        .main_content nav.main_nav ul li.active .table_cell a, .main_content nav.main_nav ul li:hover .table_cell a {
+          color: #45bcd2; }
+      .main_content nav.main_nav ul li.active {
+        margin-left: 20px; }
   .main_content .dashboard {
     padding: 25px 35px 0 35px;
     background-color: #fefefe;
@@ -187,7 +227,7 @@ header nav.upper_nav {
     .main_content .dashboard .pagination {
       clear: both;
       margin: 35px auto;
-      width: 40%;
+      width: 45%;
       font-family: "Folks-Light";
       font-size: 16px; }
       .main_content .dashboard .pagination li {
@@ -230,21 +270,82 @@ header nav.upper_nav {
 .promo {
   height: 75px;
   background: url(./images/dashboard_browse_gifts_backgr_gray.png);
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .promo p {
     font-family: "TrashHand";
     color: #45bcd2;
     font-size: 27px;
     line-height: 80px;
     padding-left: 225px; }
+  .promo .advert {
+    height: 441px;
+    width: 285px;
+    position: absolute;
+    top: -8px;
+    right: 225px;
+    background: url(./images/dashboard_browse_gifts-shape_for_ad.png) no-repeat center bottom;
+    padding-bottom: 34px; }
+    .promo .advert .content_ad {
+      background-color: #fff;
+      height: 100%;
+      text-align: center;
+      padding: 0 20px; }
+      .promo .advert .content_ad h1 {
+        color: #dd6743;
+        font-family: "TrashHand";
+        font-size: 40px; }
+      .promo .advert .content_ad p {
+        color: #0f3d46;
+        font-size: 17px;
+        font-family: "Folks-Light";
+        padding: 0;
+        line-height: 20px; }
+      .promo .advert .content_ad h1, .promo .advert .content_ad p {
+        padding-top: 25px; }
+      .promo .advert .content_ad form {
+        margin-bottom: 35px; }
+        .promo .advert .content_ad form input[type=email] {
+          height: 30px;
+          width: 250px;
+          border-radius: 20px;
+          border: 1px solid #c9c9c9;
+          color: #bfbfbf;
+          font-size: 16px;
+          font-family: "Folks-Normal";
+          text-align: center;
+          margin-top: 15px; }
+        .promo .advert .content_ad form input[type=submit] {
+          margin-top: 10px;
+          height: 30px;
+          width: 225px;
+          background-color: #ffce63;
+          border: 1px solid #f4b244;
+          border-bottom: #ca9337;
+          border-radius: 20px;
+          color: #8f5d25;
+          font-family: "Folks-Light";
+          font-size: 16px;
+          cursor: pointer; }
+      .promo .advert .content_ad a {
+        font-family: "Folks-Light";
+        font-size: 17px;
+        color: #45bcd2;
+        margin-top: 35px; }
+      .promo .advert .content_ad a:hover {
+        text-decoration: none; }
+      .promo .advert .content_ad p {
+        font-size: 17px;
+        color: #0f3d46;
+        font-family: "Folks-Light"; }
 
 .basement {
-  width: 100%;
   background: url(./images/dashboard_browse_gifts_backgr_dark_gray.png);
   font-family: "Folks-Light";
   padding: 25px 0 0 225px; }
   .basement .about, .basement .client_serv, .basement .get_in_touch, .basement .type_of_occasion, .basement .social {
     margin-right: 35px;
+    margin-bottom: 50px;
     float: left; }
     .basement .about .title_about, .basement .about .title_client_serv, .basement .about .title_get_in_touch, .basement .about .title_type_of_occasion, .basement .about .title_social, .basement .client_serv .title_about, .basement .client_serv .title_client_serv, .basement .client_serv .title_get_in_touch, .basement .client_serv .title_type_of_occasion, .basement .client_serv .title_social, .basement .get_in_touch .title_about, .basement .get_in_touch .title_client_serv, .basement .get_in_touch .title_get_in_touch, .basement .get_in_touch .title_type_of_occasion, .basement .get_in_touch .title_social, .basement .type_of_occasion .title_about, .basement .type_of_occasion .title_client_serv, .basement .type_of_occasion .title_get_in_touch, .basement .type_of_occasion .title_type_of_occasion, .basement .type_of_occasion .title_social, .basement .social .title_about, .basement .social .title_client_serv, .basement .social .title_get_in_touch, .basement .social .title_type_of_occasion, .basement .social .title_social {
       height: 30px;
@@ -270,12 +371,16 @@ header nav.upper_nav {
       font-size: 15px;
       line-height: 22px; }
       .basement .about .body_about li, .basement .about .body_client_serv li, .basement .about .body_type_of_occasion li, .basement .about .body_social li, .basement .client_serv .body_about li, .basement .client_serv .body_client_serv li, .basement .client_serv .body_type_of_occasion li, .basement .client_serv .body_social li, .basement .get_in_touch .body_about li, .basement .get_in_touch .body_client_serv li, .basement .get_in_touch .body_type_of_occasion li, .basement .get_in_touch .body_social li, .basement .type_of_occasion .body_about li, .basement .type_of_occasion .body_client_serv li, .basement .type_of_occasion .body_type_of_occasion li, .basement .type_of_occasion .body_social li, .basement .social .body_about li, .basement .social .body_client_serv li, .basement .social .body_type_of_occasion li, .basement .social .body_social li {
-        color: #169bb4;
         list-style-image: url(./images/list_type.png);
         margin-left: 15px; }
         .basement .about .body_about li span, .basement .about .body_client_serv li span, .basement .about .body_type_of_occasion li span, .basement .about .body_social li span, .basement .client_serv .body_about li span, .basement .client_serv .body_client_serv li span, .basement .client_serv .body_type_of_occasion li span, .basement .client_serv .body_social li span, .basement .get_in_touch .body_about li span, .basement .get_in_touch .body_client_serv li span, .basement .get_in_touch .body_type_of_occasion li span, .basement .get_in_touch .body_social li span, .basement .type_of_occasion .body_about li span, .basement .type_of_occasion .body_client_serv li span, .basement .type_of_occasion .body_type_of_occasion li span, .basement .type_of_occasion .body_social li span, .basement .social .body_about li span, .basement .social .body_client_serv li span, .basement .social .body_type_of_occasion li span, .basement .social .body_social li span {
           color: #dd6743;
           margin-right: 5px; }
+        .basement .about .body_about li a, .basement .about .body_client_serv li a, .basement .about .body_type_of_occasion li a, .basement .about .body_social li a, .basement .client_serv .body_about li a, .basement .client_serv .body_client_serv li a, .basement .client_serv .body_type_of_occasion li a, .basement .client_serv .body_social li a, .basement .get_in_touch .body_about li a, .basement .get_in_touch .body_client_serv li a, .basement .get_in_touch .body_type_of_occasion li a, .basement .get_in_touch .body_social li a, .basement .type_of_occasion .body_about li a, .basement .type_of_occasion .body_client_serv li a, .basement .type_of_occasion .body_type_of_occasion li a, .basement .type_of_occasion .body_social li a, .basement .social .body_about li a, .basement .social .body_client_serv li a, .basement .social .body_type_of_occasion li a, .basement .social .body_social li a {
+          text-decoration: none;
+          color: #169bb4; }
+        .basement .about .body_about li a:hover, .basement .about .body_client_serv li a:hover, .basement .about .body_type_of_occasion li a:hover, .basement .about .body_social li a:hover, .basement .client_serv .body_about li a:hover, .basement .client_serv .body_client_serv li a:hover, .basement .client_serv .body_type_of_occasion li a:hover, .basement .client_serv .body_social li a:hover, .basement .get_in_touch .body_about li a:hover, .basement .get_in_touch .body_client_serv li a:hover, .basement .get_in_touch .body_type_of_occasion li a:hover, .basement .get_in_touch .body_social li a:hover, .basement .type_of_occasion .body_about li a:hover, .basement .type_of_occasion .body_client_serv li a:hover, .basement .type_of_occasion .body_type_of_occasion li a:hover, .basement .type_of_occasion .body_social li a:hover, .basement .social .body_about li a:hover, .basement .social .body_client_serv li a:hover, .basement .social .body_type_of_occasion li a:hover, .basement .social .body_social li a:hover {
+          color: #dd6743; }
     .basement .about .body_get_in_touch, .basement .client_serv .body_get_in_touch, .basement .get_in_touch .body_get_in_touch, .basement .type_of_occasion .body_get_in_touch, .basement .social .body_get_in_touch {
       font-size: 15px;
       line-height: 22px; }
@@ -296,11 +401,25 @@ header nav.upper_nav {
   .basement .type_of_occasion {
     clear: both;
     width: 380px;
-    margin-top: 50px;
     margin-right: 35px; }
-  .basement .social {
-    margin-top: 50px; }
   .basement .add_div_clear {
     clear: both; }
+
+.basement:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 55px; }
+
+footer {
+  height: 55px;
+  background-color: #dd6743;
+  margin-top: -55px; }
+  footer p {
+    font-size: 14px;
+    color: white;
+    font-family: "Folks-Light";
+    line-height: 65px;
+    padding-left: 245px; }
 
 /*# sourceMappingURL=styles.css.map */
