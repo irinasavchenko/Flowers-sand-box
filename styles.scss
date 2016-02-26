@@ -13,9 +13,11 @@ button, input {
   padding: 0;
   outline: none;
 }
+
  body {
    min-width: 1390px;
  }
+
 header {
   nav.upper_nav {
     height: 75px;
@@ -120,8 +122,12 @@ header {
     li:hover ul {
       display: block;
     }
-
   }
+}
+.user_info:after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
 .add_div {
@@ -147,6 +153,8 @@ header {
       color: #8f5d25;
       font-size: 16px;
       font-family: "Folks-Light";
+      cursor: pointer;
+      box-shadow: 0 2px 2px #bebfc3;
     }
   }
   nav.main_nav {
@@ -194,7 +202,6 @@ header {
       li.active {
         margin-left: 20px;
       }
-
     }
   }
 
@@ -269,7 +276,11 @@ header {
           margin-bottom:  5px;
         }
       }
-
+    }
+    .photo_gallery:after {
+      display: block;
+      clear: both;
+      content: "";
     }
     .pagination {
       clear: both;
@@ -284,24 +295,43 @@ header {
           text-decoration: none;
           color: #0f3d46;
           line-height: 32px;
+          cursor: poiner;
+        }
+        a:hover {
+          color: #45bcd2;
         }
         button {
           width: 80px;
           height: 30px;
           background-color: #f3f6f8;
           border: 1px solid #45bcd2;
-          border-radius: 2px;
-          color: #45bcd2;
+          border-radius: 3px;
         }
         a,button {
           padding: 0 15px;
         }
+         a>button {
+          padding: 0;
+          color: #45bcd2;
+          font-family: "Folks-Light";
+           cursor: pointer;
+        }
+        button:hover {
+          background-color: #fefefe;
+        }
+      }
+      li:first-child a, li:last-child a {
+        padding: 0;
       }
       li.active_page a{
         color: #45bcd2;
       }
     }
-
+    .pagination:after {
+      display: block;
+      clear: both;
+      content: "";
+    }
   }
   .notice_area {
     margin: 25px 0;
@@ -323,10 +353,11 @@ header {
      margin-left: 40px;
    }
   }
-  .add_div_clear {
+  .notice_area:after {
+    display: block;
     clear: both;
+    content: "";
   }
-
 }
 .promo {
   height: 75px;
@@ -393,6 +424,8 @@ header {
           font-family: "Folks-Light";
           font-size: 16px;
           cursor: pointer;
+          box-shadow: 0 2px 2px #cfcfcf;
+          text-shadow: 0 2px #ffedc3;
         }
       }
       a {
@@ -483,19 +516,12 @@ header {
         float: right;
         width: 47%;
       }
-      .add_div_clear {
-        clear: both;
-      }
     }
   }
   .type_of_occasion {
     clear: both;
     width: 380px;
     margin-right: 35px;
-  }
-
-  .add_div_clear {
-    clear: both;
   }
 }
 
@@ -505,6 +531,7 @@ header {
   clear: both;
   height: 55px;
 }
+
 footer {
   height: 55px;
   background-color: #dd6743;
