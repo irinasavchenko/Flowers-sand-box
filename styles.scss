@@ -13,9 +13,11 @@ button, input {
   padding: 0;
   outline: none;
 }
+
  body {
    min-width: 1390px;
  }
+
 header {
   nav.upper_nav {
     height: 75px;
@@ -52,7 +54,6 @@ header {
             color: #ab2717;
             font-size: 15px;
             padding: 0 50px;
-
           }
         }
       }
@@ -120,8 +121,16 @@ header {
     li:hover ul {
       display: block;
     }
-
   }
+}
+/*
+.user_info:after {
+  display: block;
+  content: "";
+  clear: both;
+}*/
+.user_info {
+  @extend %clearfix;
 }
 
 .add_div {
@@ -145,8 +154,12 @@ header {
       background-color: #ffc153;
       border: 1px solid #ca9337;
       color: #8f5d25;
-      font-size: 16px;
-      font-family: "Folks-Light";
+      font: {
+        size: 16px;
+        family: "Folks-Light";
+      }
+      cursor: pointer;
+      box-shadow: 0 2px 2px #bebfc3;
     }
   }
   nav.main_nav {
@@ -194,7 +207,6 @@ header {
       li.active {
         margin-left: 20px;
       }
-
     }
   }
 
@@ -268,9 +280,20 @@ header {
         figcaption {
           margin-bottom:  5px;
         }
+        a {
+          text-decoration: none;
+        }
       }
-
     }
+ /*   .photo_gallery:after {
+      display: block;
+      clear: both;
+      content: "";
+    }*/
+    .photo_gallery {
+      @extend %clearfix;
+    }
+
     .pagination {
       clear: both;
       margin: 35px auto;
@@ -284,24 +307,41 @@ header {
           text-decoration: none;
           color: #0f3d46;
           line-height: 32px;
+          cursor: poiner;
+        }
+        a:hover {
+          color: #45bcd2;
         }
         button {
           width: 80px;
           height: 30px;
           background-color: #f3f6f8;
           border: 1px solid #45bcd2;
-          border-radius: 2px;
-          color: #45bcd2;
+          border-radius: 3px;
         }
         a,button {
           padding: 0 15px;
         }
+         a>button {
+          padding: 0;
+          color: #45bcd2;
+          font-family: "Folks-Light";
+           cursor: pointer;
+        }
+        button:hover {
+          background-color: #fefefe;
+        }
+      }
+      li:first-child a, li:last-child a {
+        padding: 0;
       }
       li.active_page a{
         color: #45bcd2;
       }
     }
-
+    .pagination {
+      @extend %clearfix;
+    }
   }
   .notice_area {
     margin: 25px 0;
@@ -323,10 +363,9 @@ header {
      margin-left: 40px;
    }
   }
-  .add_div_clear {
-    clear: both;
+  .notice_area {
+    @extend %clearfix;
   }
-
 }
 .promo {
   height: 75px;
@@ -393,6 +432,8 @@ header {
           font-family: "Folks-Light";
           font-size: 16px;
           cursor: pointer;
+          box-shadow: 0 2px 2px #cfcfcf;
+          text-shadow: 0 2px #ffedc3;
         }
       }
       a {
@@ -483,9 +524,6 @@ header {
         float: right;
         width: 47%;
       }
-      .add_div_clear {
-        clear: both;
-      }
     }
   }
   .type_of_occasion {
@@ -493,18 +531,16 @@ header {
     width: 380px;
     margin-right: 35px;
   }
-
-  .add_div_clear {
-    clear: both;
-  }
 }
 
 .basement:after {
-  content: "";
-  display: block;
-  clear: both;
   height: 55px;
 }
+
+.basement {
+  @extend %clearfix;
+}
+
 footer {
   height: 55px;
   background-color: #dd6743;

@@ -10,6 +10,14 @@
 @font-face {
   font-family: "TrashHand";
   src: url("./fonts/trash_hand/TrashHand.TTF") format("truetype"); }
+.user_info, .main_content .dashboard .photo_gallery, .main_content .dashboard .pagination, .main_content .notice_area, .basement {
+  *zoom: 1; }
+  .user_info:before, .main_content .dashboard .photo_gallery:before, .main_content .dashboard .pagination:before, .main_content .notice_area:before, .basement:before, .user_info:after, .main_content .dashboard .photo_gallery:after, .main_content .dashboard .pagination:after, .main_content .notice_area:after, .basement:after {
+    content: " ";
+    display: table; }
+  .user_info:after, .main_content .dashboard .photo_gallery:after, .main_content .dashboard .pagination:after, .main_content .notice_area:after, .basement:after {
+    clear: both; }
+
 /* clear the default browser styles */
 html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote {
   padding: 0;
@@ -107,6 +115,12 @@ header nav.upper_nav {
     .user_info .user_account li:hover ul {
       display: block; }
 
+/*
+.user_info:after {
+  display: block;
+  content: "";
+  clear: both;
+}*/
 .add_div {
   height: 3px;
   width: 100%;
@@ -129,7 +143,9 @@ header nav.upper_nav {
       border: 1px solid #ca9337;
       color: #8f5d25;
       font-size: 16px;
-      font-family: "Folks-Light"; }
+      font-family: "Folks-Light";
+      cursor: pointer;
+      box-shadow: 0 2px 2px #bebfc3; }
   .main_content nav.main_nav {
     font-family: "Folks-Light";
     clear: right;
@@ -172,7 +188,12 @@ header nav.upper_nav {
     background-color: #fefefe;
     clear: both;
     height: 100%;
-    border: 1px solid #d2dce1; }
+    border: 1px solid #d2dce1;
+    /*   .photo_gallery:after {
+         display: block;
+         clear: both;
+         content: "";
+       }*/ }
     .main_content .dashboard .dashboard_label {
       float: left; }
       .main_content .dashboard .dashboard_label p {
@@ -224,6 +245,8 @@ header nav.upper_nav {
           font-size: 16px; }
         .main_content .dashboard .photo_gallery figure figcaption {
           margin-bottom: 5px; }
+        .main_content .dashboard .photo_gallery figure a {
+          text-decoration: none; }
     .main_content .dashboard .pagination {
       clear: both;
       margin: 35px auto;
@@ -236,16 +259,27 @@ header nav.upper_nav {
         .main_content .dashboard .pagination li a {
           text-decoration: none;
           color: #0f3d46;
-          line-height: 32px; }
+          line-height: 32px;
+          cursor: poiner; }
+        .main_content .dashboard .pagination li a:hover {
+          color: #45bcd2; }
         .main_content .dashboard .pagination li button {
           width: 80px;
           height: 30px;
           background-color: #f3f6f8;
           border: 1px solid #45bcd2;
-          border-radius: 2px;
-          color: #45bcd2; }
+          border-radius: 3px; }
         .main_content .dashboard .pagination li a, .main_content .dashboard .pagination li button {
           padding: 0 15px; }
+        .main_content .dashboard .pagination li a > button {
+          padding: 0;
+          color: #45bcd2;
+          font-family: "Folks-Light";
+          cursor: pointer; }
+        .main_content .dashboard .pagination li button:hover {
+          background-color: #fefefe; }
+      .main_content .dashboard .pagination li:first-child a, .main_content .dashboard .pagination li:last-child a {
+        padding: 0; }
       .main_content .dashboard .pagination li.active_page a {
         color: #45bcd2; }
   .main_content .notice_area {
@@ -264,8 +298,6 @@ header nav.upper_nav {
         background: url(./images/dashboard_browse_gifts_shape.png) no-repeat 95% 10%; }
     .main_content .notice_area div:first-child {
       margin-left: 40px; }
-  .main_content .add_div_clear {
-    clear: both; }
 
 .promo {
   height: 75px;
@@ -326,7 +358,9 @@ header nav.upper_nav {
           color: #8f5d25;
           font-family: "Folks-Light";
           font-size: 16px;
-          cursor: pointer; }
+          cursor: pointer;
+          box-shadow: 0 2px 2px #cfcfcf;
+          text-shadow: 0 2px #ffedc3; }
       .promo .advert .content_ad a {
         font-family: "Folks-Light";
         font-size: 17px;
@@ -396,19 +430,12 @@ header nav.upper_nav {
       .basement .about .body_type_of_occasion ul.right_list, .basement .client_serv .body_type_of_occasion ul.right_list, .basement .get_in_touch .body_type_of_occasion ul.right_list, .basement .type_of_occasion .body_type_of_occasion ul.right_list, .basement .social .body_type_of_occasion ul.right_list {
         float: right;
         width: 47%; }
-      .basement .about .body_type_of_occasion .add_div_clear, .basement .client_serv .body_type_of_occasion .add_div_clear, .basement .get_in_touch .body_type_of_occasion .add_div_clear, .basement .type_of_occasion .body_type_of_occasion .add_div_clear, .basement .social .body_type_of_occasion .add_div_clear {
-        clear: both; }
   .basement .type_of_occasion {
     clear: both;
     width: 380px;
     margin-right: 35px; }
-  .basement .add_div_clear {
-    clear: both; }
 
 .basement:after {
-  content: "";
-  display: block;
-  clear: both;
   height: 55px; }
 
 footer {
