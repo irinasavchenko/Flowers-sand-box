@@ -54,7 +54,6 @@ header {
             color: #ab2717;
             font-size: 15px;
             padding: 0 50px;
-
           }
         }
       }
@@ -124,10 +123,14 @@ header {
     }
   }
 }
+/*
 .user_info:after {
   display: block;
   content: "";
   clear: both;
+}*/
+.user_info {
+  @extend %clearfix;
 }
 
 .add_div {
@@ -151,8 +154,10 @@ header {
       background-color: #ffc153;
       border: 1px solid #ca9337;
       color: #8f5d25;
-      font-size: 16px;
-      font-family: "Folks-Light";
+      font: {
+        size: 16px;
+        family: "Folks-Light";
+      }
       cursor: pointer;
       box-shadow: 0 2px 2px #bebfc3;
     }
@@ -275,13 +280,20 @@ header {
         figcaption {
           margin-bottom:  5px;
         }
+        a {
+          text-decoration: none;
+        }
       }
     }
-    .photo_gallery:after {
+ /*   .photo_gallery:after {
       display: block;
       clear: both;
       content: "";
+    }*/
+    .photo_gallery {
+      @extend %clearfix;
     }
+
     .pagination {
       clear: both;
       margin: 35px auto;
@@ -327,10 +339,8 @@ header {
         color: #45bcd2;
       }
     }
-    .pagination:after {
-      display: block;
-      clear: both;
-      content: "";
+    .pagination {
+      @extend %clearfix;
     }
   }
   .notice_area {
@@ -353,10 +363,8 @@ header {
      margin-left: 40px;
    }
   }
-  .notice_area:after {
-    display: block;
-    clear: both;
-    content: "";
+  .notice_area {
+    @extend %clearfix;
   }
 }
 .promo {
@@ -526,10 +534,11 @@ header {
 }
 
 .basement:after {
-  content: "";
-  display: block;
-  clear: both;
   height: 55px;
+}
+
+.basement {
+  @extend %clearfix;
 }
 
 footer {
